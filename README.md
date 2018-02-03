@@ -1,6 +1,7 @@
 # Telegraph (Work in progress)
 ###### An IoT device network simulator
-
+# Dependencies
+- pip install runp
 
 # How to run
 
