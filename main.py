@@ -56,7 +56,7 @@ while(t>0):
 	if(device == "smart_motion_detector_camera"):
 		while(n>0):
 			launch_motionD = "runp " + "motionD.py " + "motion_detector:" + room + ",ID=" + str(j)
-			procMD.append(Popen("gnome-terminal -e" + launch_motionD + "'", shell = True))
+			procMD.append(Popen("gnome-terminal -e '" + launch_motionD + "'", shell = True))
 			sleep(5)
 
 			#motion_detector("room1", j)
@@ -66,7 +66,7 @@ while(t>0):
 	elif(device == "smart_temperature_sensor"):
 		while(n>0):
 			launch_temperatureS = "runp" + "temperatureS.py" + "temperature_sensor:" + room + ",ID=" + str(j)
-			procTS.append(Popen("gnome-terminal -e" + launch_temperatureS + "'", shell = True))
+			procTS.append(Popen("gnome-terminal -e '" + launch_temperatureS + "'", shell = True))
 			sleep(5)
 
 			#temperature_sensor("room1", j)
