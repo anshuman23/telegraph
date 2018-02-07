@@ -77,6 +77,7 @@ while(t>0):
 		break
 
 	t = t-1
+	i = i+2
 
 a = len(procMD)
 b = len(procTS)
