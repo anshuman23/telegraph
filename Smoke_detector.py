@@ -22,9 +22,9 @@ def timer(n):
 	door=True
 	water_sprinkler=True
 
-i=1
+
 print "This is a trial Simulation of a Smoke Detector"
-while --i:
+while 1:
 	ppm=random.randint(1,500)
 	print ppm
 	if ppm<70:
