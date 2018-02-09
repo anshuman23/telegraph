@@ -1,0 +1,1 @@
+{"room1": {"smart_motion_detector_camera": {"id": ["smart_motion_detector_camera-0", "smart_motion_detector_camera-1"], "port": ["3000", "80"], "quantity": 2}, "smart_temperature_sensor": {"id": ["smart_temperature_sensor-0", "smart_temperature_sensor-1"], "port": ["80", "3000"], "quantity": 2}}}
