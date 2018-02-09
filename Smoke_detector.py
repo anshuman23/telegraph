@@ -1,6 +1,5 @@
 import random
 import time
-import threading
 
 #True for Lock and False for Open
 water_sprinkler=False
@@ -9,6 +8,8 @@ door=random.choice(option)
 windows=random.choice(option)
 
 def timer(n):
+	windows=False
+	door=False
 	print "Timer set for "+str(n)+" Minutes."
 	print "Please Evacuate!"
 	mins = 0
@@ -18,8 +19,7 @@ def timer(n):
 		time.sleep(60)
 		# Increment the minute total
 		mins += 1
-	windows=True
-	door=True
+	
 	water_sprinkler=True
 
 
