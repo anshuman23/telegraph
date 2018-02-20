@@ -28,6 +28,7 @@ def smart_lights(room, ID):
 
 
 	while 1:
+     		present_time = round(time.time(), 5)
 
 
 		Auto=random.choice([0,1])
