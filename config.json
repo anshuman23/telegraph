@@ -1,1 +1,67 @@
-{"room1": {"smart_motion_detector_camera": {"quantity": 2, "id": ["smart_motion_detector_camera-0", "smart_motion_detector_camera-1"], "port": ["80", "3000"]}, "smart_temperature_sensor": {"quantity": 2, "id": ["smart_temperature_sensor-0", "smart_temperature_sensor-1"], "port": ["80", "3000"]}}}
+{
+    "room1": {
+        "smart_lights": {
+            "id": [
+                "smart_lights-0"
+            ], 
+            "port": [
+                "3000"
+            ], 
+            "quantity": 1
+        }, 
+        "smart_toaster": {
+            "id": [
+                "smart_toaster-0"
+            ], 
+            "port": [
+                "3000"
+            ], 
+            "quantity": 1
+        }, 
+        "smart_temperature_sensor": {
+            "id": [
+                "smart_temperature_sensor-0"
+            ], 
+            "port": [
+                "80"
+            ], 
+            "quantity": 1
+        }, 
+        "smart_ac": {
+            "id": [
+                "smart_ac-0"
+            ], 
+            "port": [
+                "3000"
+            ], 
+            "quantity": 1
+        }, 
+        "smart_motion_detector_camera": {
+            "id": [
+                "smart_motion_detector_camera-0"
+            ], 
+            "port": [
+                "3000"
+            ], 
+            "quantity": 1
+        }, 
+        "smoke_detector": {
+            "id": [
+                "smoke_detector-0"
+            ], 
+            "port": [
+                "3000"
+            ], 
+            "quantity": 1
+        }, 
+        "smart_lock": {
+            "id": [
+                "smart_lock-0"
+            ], 
+            "port": [
+                "80"
+            ], 
+            "quantity": 1
+        }
+    }
+}
