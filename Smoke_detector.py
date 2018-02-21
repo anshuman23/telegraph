@@ -34,7 +34,7 @@ def timer(n):
 def smart_smoke_detector(room, ID):
 	print "Starting Smart Smoke detector device .. press Ctrl+c to stop"
 	start = time.time()
-	device = "smart_motion_detector_camera"
+	device = "smoke_detector"
 	ip = "127.0.0.1"
 	id = config[room][device]['id'][int(ID)]
 	p = int(config[room][device]['port'][int(ID)])
