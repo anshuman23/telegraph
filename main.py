@@ -78,7 +78,7 @@ while(types_of_devices > 0):
 
 	elif(device == "smart_temperature_sensor"):
 		while(number_of_devices>0):
-			launch_temperatureS = "runp" + "temperatureS.py" + "temperature_sensor:\"" + room + "\",ID=" + str(j)
+			launch_temperatureS = "runp " + "temperatureS.py" + "temperature_sensor:\"" + room + "\",ID=" + str(j)
 			procTS.append(Popen("xterm -e '" + launch_temperatureS + "'", shell = True))
 			sleep(8)
 			print "Started second window"
@@ -89,7 +89,7 @@ while(types_of_devices > 0):
 
 	elif(device == "smart_lights"):
 		while(number_of_devices>0):
-			launch_smart_lights = "runp" + "Smart_lights.py" + "smart_lights:\"" + room + "\",ID=" + str(j)
+			launch_smart_lights = "runp " + "Smart_lights.py" + "smart_lights:\"" + room + "\",ID=" + str(j)
 			procSL.append(Popen("xterm -e '" + launch_smart_lights + "'", shell = True))
 			sleep(8)
 			print "started Third window"
@@ -99,7 +99,7 @@ while(types_of_devices > 0):
 
 	elif(device == "smoke_detector"):
 		while(number_of_devices>0):
-			launch_smoke_detector = "runp" + "Smoke_detector.py" + "smoke_detector:\"" + room + "\",ID=" + str(j)
+			launch_smoke_detector = "runp " + "Smoke_detector.py" + "smoke_detector:\"" + room + "\",ID=" + str(j)
 			procSD.append(Popen("xterm -e '" + launch_smoke_detector + "'", shell = True))
 			sleep(8)
 			print "started fourth window"
@@ -109,7 +109,7 @@ while(types_of_devices > 0):
 
 	elif(device == "smart_ac"):
 		while(number_of_devices>0):
-			launch_smart_ac = "runp" + "smartAC.py"+ "smart_Ac:\"" + room + "\",ID=" + str(j)
+			launch_smart_ac = "runp " + "smartAC.py"+ "smart_Ac:\"" + room + "\",ID=" + str(j)
 			procSA.append(Popen("xterm -e '" + launch_smart_ac + "'", shell = True))
 			sleep(8)
 			print "started fifth window"
