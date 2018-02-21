@@ -1,44 +1,44 @@
-## smart_AC device
 
+import os
 import json
 import time
-import socket
-import os
+import random
 import csv
 import random
+import socket
+
+## 0 signifies lock and 1 signifies on
 
 DATA_DIR="./data/"
 
-#with open('config', 'r') as f:
-#	config = json.load(f)
+with open('config.json', 'r') as f:
+	config = json.load(f)
 
+def smart_lock(room, ID):
 
-def smart_ac(room, ID):
-	print "starting smart Air conditioning device.. press ctrl+C to stop"
+	print "Simulating smart lock ... press ctrl + C to exit"
+
 	start = time.time()
-	device = "smart_ac"
+	device = "smart_lock"
 	ip = "127.0.0.1"
 	id = config[room][device]['id'][int(ID)]
 	p = config[room][device]['port'][int(ID)]
 
-	desired_temp = random.randint(16, 40)
-	room_temperature = random.randint(-10, 50)
+	lock = random.choice([0, 1])
 
 	while 1:
 
-		present_time = round(time.time(),5)
+		present_time = round(time.time(), 5)
 
-		if(desired_temp < room_temperature):
-			room_temperature = random.randint(-10, room_temperature)
-			value = "cool" + str(room_temperature)
+		externalSignal = random.choice([0, 1]) ## variable to be changed by other smart devices when needed
 
-		elif(desired_temp > room_temperature):
-			room_temperature = random.randint(room_temperature, 50)
-			value = "hot" + str(room_temperature)
+		if externalSignal != lock:
+			lock = externalSignal
+			value = str(lock)
 
 		else:
-			room_temperature = random.randint(-10, 50)
-			value = "eco-sleep" + str(room_temperature)
+			value = "sleep"
+
 
 		message = {}
 		message["id"] = str(id)
@@ -56,6 +56,8 @@ def smart_ac(room, ID):
 
 		csv.writer(open(DATA_DIR + id + '.csv', 'ab'), delimiter = ',').writerow([present_time, value])
 		time.sleep(1)
+
 		if(time.time() - start > 43200):
 			return 
+
 
