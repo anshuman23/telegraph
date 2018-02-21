@@ -74,6 +74,9 @@ def smart_lights(room, ID):
 
 		csv.writer(open(DATA_DIR + id + '.csv', 'ab'), delimiter = ',').writerow([present_time, value])
 		time.sleep(timeout)
+		
+		if(time.time() - start > 43200):
+			return
 
 	
 		
