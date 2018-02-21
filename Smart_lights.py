@@ -3,14 +3,16 @@
 import json
 import random
 import time
+from time import sleep
 import socket
 import os
 import csv
 
 
 DATA_DIR="./data/"
-#with open('config.json') as f:
-#config = json.load(f)
+
+with open('config.json') as f:
+	config = json.load(f)
 
 
 def smart_lights(room, ID):
@@ -18,20 +20,21 @@ def smart_lights(room, ID):
 	start = time.time()
 	device = "smart_lights"
 	ip = "127.0.0.1"
+	#p = 3000 testing purpose
+	#id = "smart_lights_0" testing purpose
 	p = int(config[room][device]['port'][int(ID)])
 	id = config[room][device]['id'][int(ID)]
 
 	
 	feed_start = start
 	Lights=0
-	motion_bool = random.choice([0,1]) #Will Be using Anshuman's Code Variable to Detect Motion
 
 
 	while 1:
-     		present_time = round(time.time(), 5)
+		present_time = round(time.time(), 5)
 
+		motion_bool = random.choice([0,1]) #Will Be using Anshuman's Code Variable to Detect Motion
 
-		Auto=random.choice([0,1])
 		Availability_of_daylight=random.randrange(0,100)
 		Bluelight_content=random.randrange(0,100)
 		Daylight_simulation=random.randrange(0,100)
@@ -46,18 +49,12 @@ def smart_lights(room, ID):
 		Luminosity+=0.2*Tunable_white
 		Luminosity+=0.1*illumination_of_room_surfaces
 
-		if(Auto==1):
-	
-			if(motion_bool==0):
-				Lights=0
-			else:
-				Lights=1
-				print "Current Brightness Set to "+ Luminosity+"%"
+		if(motion_bool==0):
+			Lights=0
 		else:
-			print "Set Brightness "		
-			Luminosity=raw_input()
-			print "Current Brightness Set to "+ Luminosity+"%"
-	
+			Lights=1
+			print "Current Brightness Set to "+ str(Luminosity)+"%"
+
 
 		value = str(Luminosity)
 		timeout = 1.0
