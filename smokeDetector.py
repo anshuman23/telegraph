@@ -9,8 +9,8 @@ import csv
 
 DATA_DIR="./data/"
 
-#with open('config.json') as f:
-#	config = json.load(f)
+with open('config.json') as f:
+	config = json.load(f)
 
 def smoke_detector(room, ID):
 	print "Starting Smart Smoke detector device .. press Ctrl+c to stop"
