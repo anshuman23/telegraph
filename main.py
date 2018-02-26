@@ -85,7 +85,6 @@ while(types_of_devices > 0):
 			launch_motionD = "runp " + "motionDetector.py " + "motion_detector:\"" + room + "\",ID=" + str(j)
 			procMD.append(Popen(terminal + " -e '" + launch_motionD + "'", shell = True))
 			print "Started first window"
-			sleep(5)
 
 			#motion_detector("room1", j)
 			number_of_devices = number_of_devices - 1
@@ -96,7 +95,6 @@ while(types_of_devices > 0):
 			launch_temperatureS = "runp " + "temperatureSensor.py " + "temperature_sensor:\"" + room + "\",ID=" + str(j)
 			procTS.append(Popen(terminal + " -e '" + launch_temperatureS + "'", shell = True))
 			print "Started second window"
-			sleep(5)
 
 			#temperature_sensor("room1", j)
 			number_of_devices = number_of_devices - 1
@@ -107,7 +105,6 @@ while(types_of_devices > 0):
 			launch_smart_lights = "runp " + "smartLights.py " + "smart_lights:\"" + room + "\",ID=" + str(j)
 			procSL.append(Popen(terminal + " -e '" + launch_smart_lights + "'", shell = True))
 			print "started Third window"
-			sleep(5)
 
 			number_of_devices = number_of_devices - 1
 			j = j + 1
@@ -117,7 +114,6 @@ while(types_of_devices > 0):
 			launch_smoke_detector = "runp " + "smokeDetector.py " + "smoke_detector:\"" + room + "\",ID=" + str(j)
 			procSD.append(Popen(terminal + " -e '" + launch_smoke_detector + "'", shell = True))
 			print "started fourth window"
-			sleep(5)
 
 			number_of_devices = number_of_devices - 1
 			j = j + 1
@@ -127,7 +123,6 @@ while(types_of_devices > 0):
 			launch_smart_ac = "runp " + "smartAC.py "+ "smart_ac:\"" + room + "\",ID=" + str(j)
 			procSA.append(Popen(terminal + " -e '" + launch_smart_ac + "'", shell = True))
 			print "started fifth window"
-			sleep(5)
 
 			number_of_devices = number_of_devices - 1
 			j = j + 1
@@ -137,7 +132,6 @@ while(types_of_devices > 0):
 			launch_smart_lock = "runp " + "smartLock.py " + "smart_lock:\"" + room + "\",ID=" + str(j)
 			procSLo.append(Popen(terminal + " -e '" + launch_smart_lock + "'", shell = True))
 			print "starting sixth window"
-			sleep(5)
 
 			number_of_devices = number_of_devices - 1
 			j = j + 1
@@ -147,7 +141,6 @@ while(types_of_devices > 0):
 			launch_smart_lock = "runp " + "smartToaster.py " + "smart_toaster:\"" + room + "\",ID=" + str(j)
 			procST.append(Popen(terminal + " -e '" + launch_smart_lock + "'", shell = True))
 			print "starting seventh window"
-			sleep(5)
 
 			number_of_devices = number_of_devices - 1
 			j = j + 1
@@ -160,8 +153,7 @@ while(types_of_devices > 0):
 
 
 
-
-sleep(10) ## let processes run for some time before terminating
+## let processes run for some time before terminating
 
 
 ## Terminating parallel proccesses ##
