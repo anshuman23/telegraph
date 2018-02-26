@@ -9,8 +9,8 @@ import random
 
 DATA_DIR="./data/"
 
-#with open('config', 'r') as f:
-#	config = json.load(f)
+with open('config', 'r') as f:
+	config = json.load(f)
 
 
 def smart_ac(room, ID):
