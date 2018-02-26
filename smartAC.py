@@ -9,7 +9,7 @@ import random
 
 DATA_DIR="./data/"
 
-with open('config', 'r') as f:
+with open('config.json', 'r') as f:
 	config = json.load(f)
 
 
